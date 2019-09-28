@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="../app/style.css">
 </head>
 
 <body>
@@ -138,7 +136,7 @@
             <button id="submitBtn" type="submit" class="btn btn-success btn-lg">Submit</button>
         </div>
 
-        <!-- Modal after survey completion -->
+
         <div id="bestFriendModal" class="modal fade" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -156,6 +154,25 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div id="bestFriendModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title">Your New Best Friend</h1>
+                </div>
+                <div class="modal-body">
+                    <h2 id="bestFriend"></h2>
+                    <img id="bestFriendPhoto" src="#">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
 
     <footer>
@@ -207,7 +224,21 @@
                 $("#bestFriend").text(data.name);
                 $("#bestFriendPhoto").attr("src", data.photo);
                 $("#bestFriendModal").modal("toggle");
+
             });
+            $("#bestFriendModal").modal("toggle");
+            $("#name").val(""),
+            $("#photo").val(""),
+            $("#question1").val(""),
+            $("#question2").val(""),
+            $("#question3").val(""),
+            $("#question4").val(""),
+            $("#question5").val(""),
+            $("#question6").val(""),
+            $("#question7").val(""),
+            $("#question8").val(""),
+            $("#question9").val(""),
+            $("#question10").val("")
         } else {
 
             alert("Survey is incomplete!");
